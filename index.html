@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>jQuery UI Slider - Default functionality</title>
+    <title>Range</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -16,14 +16,13 @@
 
     <div class="wrapper">
         <div class="container">
+            <div class="content">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="content">
-                        <h3 class="content__heading">Lorem ipsum dolor sit amet </h3>
+                    <div class="content__left">
+                        <h3 class="content__heading">your earning potential</h3>
                         <p class="content__para">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus a dicta repudiandae
-                            consequuntur, ducimus maxime, quisquam animi voluptatibus aliquam veritatis expedita,
-                            reprehenderit incidunt qui nostrum dolorum aperiam error facere eligendi?
+                                Make up to 25% commission<br> and qualify for exclusive <br>products, awards, trips <br>and cash bonuses
                         </p>
                     </div>
                 </div>
@@ -31,62 +30,50 @@
                     <div class="slider__item">
                         <h3 class="slider__heading text-uppercase">My desired Monthly Income</h3>
                         <h2 id="display">
-                            <span>$</span><span id="ammount">2500</span>
+                            <span>$ </span><span id="ammount"></span>
                         </h2>
                         <div id="slider"></div>
+
                         <div class="row">
-                            <div class="col">
-                                <span id="parties">20</span> Parties
+                            <div class="col-md-12">
+                                <P class="slider__sub_heading">you can bring it home by having</P>
                             </div>
-                            <div class="col">
-                                <span id="hours">60</span>Hours
+                            <div class="col-sm-6 slider__border-right">
+                                <div class="media">
+                                    <a class="d-flex" href="#">
+                                        <img src="img/parties.jpg" alt="parties" width="40" height="40">
+                                    </a>
+                                    <div class="media-body">
+                                        <h3 class="slider__parties"><span id="parties"></span> Parties</h3>
+                                        <p class="slider__parties__para">Average party sales are $500</p>
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="col-sm-6">
+                                    <div class="media">
+                                    <a class="d-flex" href="#">
+                                        <img src="img/hours.jpg" alt="Hours" width="40" height="40">
+                                    </a>
+                                    <div class="media-body">
+                                        <h3 class="slider__hours"><span id="hours"></span> Hours</h3>
+                                        
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </div>
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <script>
- 
-        $(function () {
-            $('#slider').slider({
-                range: "min",
-                min: 0,
-                max: 11250,
-                value: 2500,
-                step: 125,
-                slide: function (event, ui) {
-                    var amt = $("#slider").slider("value");
-                    $("#ammount").val(amt);
-                }
-                /* change: function (event, ui) {
-                    var amt = $("#slider").slider("value");
-                    $("#ammount").val(ui.value);
-                    var amount = $("#ammount").val(amt);                        
-                    $("#parties").val(amt / 125);
-                    var parties = $("#parties").val(amount / 125);
-                    $("#hours").val(parties / 125 * 3);
-                  } */
-            });
-
-            $('#slider').on("slidechange", function () {
-                var amt = $("#slider").slider("value");
-                var partie = amt / 125;
-                var hour = partie * 3;
-                $("#ammount").text(amt);
-                $("#parties").text(partie);
-                $("#hours").text(hour);
-
-            });
-
-        });
-    </script>
+    <script src="js/script.js"></script>
+    
 </body>
 
 </html>
