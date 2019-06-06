@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+}
 .wrapper{
     padding: 5rem 0;
 }
@@ -32,6 +36,7 @@
     font-size: 32px;
     line-height: 1.2;
     letter-spacing: -1px;
+    color: #141414;
 }
 .slider__heading.text-uppercase {
     font-size: 13px;
@@ -40,8 +45,8 @@
 }
 #display {
     color: #2DA399;
-    font-weight: 100;
-    font-size: 52px;
+    font-weight: 300;
+    font-size: 50px;
     margin: 15px 0;
 }
 .slider__sub_heading{
@@ -49,7 +54,6 @@
     color: #B6B6B6;
     font-weight: 500;
     margin: 40px 0 10px 0;
-
 }
 .slider__parties,
 .slider__hours {
