@@ -1,0 +1,129 @@
+.warpper {}
+
+.warpper .sideMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 17.5rem;
+    transition: all ease 0.3s;
+    transform: translateX(-100%);
+    z-index: 2000;
+    border-right: 2px solid #343A40;
+    background: #212121;
+}
+
+.warpper .content {
+    margin-left: 0rem;
+    transition: all ease 0.3s;
+    width: 100%;
+}
+
+.warpper.active .sideMenu {
+    transform: translateX(0);
+}
+
+.sidebar {
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.sidebar .abc_menu {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.sidebar .abc_menu li {
+    padding-bottom:5px ;
+    display: block;
+}
+
+.sidebar .abc_menu li a {
+    color: #fff;
+
+}
+
+.sidebar__profile {
+    padding: 1rem;
+}
+
+.title {
+    font-size: 18px;
+    color: #ccc;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    padding-bottom: 1rem;
+}
+
+nav {
+    padding: 1rem 0;
+    border-bottom: 1px double #ddd;
+}
+
+.abc__desc--item {
+    background: #fff;
+    border-radius: 40px;
+    padding: 5px 25px;
+    position: relative;
+}
+
+.abc__desc--item h3 {
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+.abc__desc--item p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.abc__desc--item-btn{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e0dfdf;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.abc__desc--item-btn .icons{
+    font-size: 40px;
+}
+.abc__desc--item-details{
+    position: absolute;
+    z-index: 2000;
+    width: calc(100% - 30px);
+    margin: auto;
+    left: 0;
+    right: 0;
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .warpper .sideMenu {
+        transform: translateX(0);
+        transition: all ease 0.3s;
+    }
+
+    .warpper .content {
+        margin-left: 17.5rem;
+        transition: all ease 0.3s;
+    }
+
+    .sideMenuToggler,
+    .close,
+    nav {
+        display: none;
+    }
+    .abc__desc--item-details{
+        position: absolute;
+        left: 17.5rem;
+        width: 320px;
+        right: 0;
+        margin: 10px;
+    }
+}
