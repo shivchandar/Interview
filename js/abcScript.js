@@ -2,7 +2,7 @@ $(document).ready(function () {
     var adjustSidebar = function () {
         $('.sidebar').slimScroll({
             //height: document.documentElement.clientHeight - $('.abc_menu').outerHeight()
-            height:'50vh',
+            height:'48vh',
             overflowY: 'hidden',
             overflowX:'visible'
         });
