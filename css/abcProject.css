@@ -104,6 +104,18 @@ nav {
     top: 50%;
     transform: translateY(-50%);
 }
+.content__person-details{
+    border-radius: 50px;
+    background: #ccc;
+    padding: 10px 20px;
+}
+.content__person-details table{
+    margin-bottom: 0;
+    width: 100%;
+}
+.form-rounded {
+    border-radius: 3rem;
+    }
 @media screen and (min-width: 768px) {
     .warpper .sideMenu {
         transform: translateX(0);
